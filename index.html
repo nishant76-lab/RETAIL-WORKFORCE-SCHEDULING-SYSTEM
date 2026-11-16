@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RetailFlow | Workforce Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Retail<span class="logo-highlight">Flow</span></span>
+            </div>
+
+            <div class="store-info">
+                <i class="fa-solid fa-store"></i>
+                <div>
+                    <h4>Retail Store</h4>
+                    <small>Management Panel</small>
+                </div>
+            </div>
+
+            <div class="menu-heading">MAIN MENU</div>
+
+            <nav class="sidebar-menu">
+
+                <a href="#" class="menu-item active" data-page="dashboard">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="employees">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Employees</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="departments">
+                    <i class="fa-solid fa-building"></i>
+                    <span>Departments</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="scheduling">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <span>Shift Scheduling</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="attendance">
+                    <i class="fa-solid fa-clock"></i>
+                    <span>Attendance</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="leave">
+                    <i class="fa-solid fa-calendar-check"></i>
+                    <span>Leave Management</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="payroll">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Payroll</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="tasks">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Task Management</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="performance">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Performance</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="directory">
+                    <i class="fa-solid fa-address-book"></i>
+                    <span>Employee Directory</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="weekly">
+                    <i class="fa-solid fa-calendar-week"></i>
+                    <span>Weekly Schedule</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="monthly">
+                    <i class="fa-solid fa-calendar"></i>
+                    <span>Monthly Schedule</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="overtime">
+                    <i class="fa-solid fa-business-time"></i>
+                    <span>Overtime</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="recruitment">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <span>Recruitment</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="reports">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span>Reports & Analytics</span>
+                </a>
+
+            </nav>
+
+            <div class="menu-heading">PREFERENCES</div>
+
+            <nav class="sidebar-menu">
+
+                <a href="#" class="menu-item" data-page="notifications">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notifications</span>
+                    <span class="notification-count">4</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="settings">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="profile">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <span>Admin Profile</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-box">
+                    <i class="fa-solid fa-headset"></i>
+                    <h4>Need Help?</h4>
+                    <p>Contact our support team.</p>
+                    <button type="button">Get Support</button>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+
+        <main class="main-content">
+
+            <!-- TOP NAVBAR -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+                    <button class="sidebar-toggle" id="sidebarToggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+
+                    <div>
+                        <h2 id="pageTitle">Dashboard</h2>
+                        <p>Welcome back, Admin!</p>
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="search" id="globalSearch" placeholder="Search anything...">
+                    </div>
+
+                    <button class="icon-button" id="notificationBtn">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="admin-profile">
+                        <img src="https://ui-avatars.com/api/?name=Admin&background=243B63&color=fff"
+                            alt="Admin Profile">
+
+                        <div>
+                            <h4>Admin</h4>
+                            <small>Administrator</small>
+                        </div>
+
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- PAGE CONTENT -->
+
+            <section class="content-area" id="contentArea">
+
+                <!-- DASHBOARD -->
+
+                <div class="page-section" id="dashboard">
+
+                    <div class="welcome-banner">
+
+                        <div>
+                            <span class="banner-tag">WORKFORCE OVERVIEW</span>
+
+                            <h1>Manage Your Workforce Smarter.</h1>
+
+                            <p>
+                                Monitor employees, manage shifts,
+                                track attendance and improve productivity.
+                            </p>
+                        </div>
+
+                        <div class="banner-icon">
+                            <i class="fa-solid fa-people-group"></i>
+                        </div>
+
+                    </div>
+
+
+                    <!-- STATISTICS -->
+
+                    <div class="stats-grid">
+
+                        <div class="stat-card">
+                            <div class="stat-icon blue">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+
+                            <p>Total Employees</p>
+                            <h2 id="totalEmployees">4</h2>
+                            <small>Active workforce</small>
+                        </div>
+
+
+                        <div class="stat-card">
+                            <div class="stat-icon green">
+                                <i class="fa-solid fa-user-check"></i>
+                            </div>
+
+                            <p>Present Today</p>
+                            <h2 id="presentEmployees">4</h2>
+                            <small>Today's attendance</small>
+                        </div>
+
+
+                        <div class="stat-card">
+                            <div class="stat-icon orange">
+                                <i class="fa-solid fa-calendar-minus"></i>
+                            </div>
+
+                            <p>On Leave</p>
+                            <h2 id="onLeave">12</h2>
+                            <small>Approved leaves</small>
+                        </div>
+
+
+                        <div class="stat-card">
+                            <div class="stat-icon purple">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <p>Active Shifts</p>
+                            <h2 id="activeShifts">18</h2>
+                            <small>Currently scheduled</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="section-header">
+                        <div>
+                            <h2>Quick Actions</h2>
+                            <p>Frequently used management tools</p>
+                        </div>
+                    </div>
+
+                    <div class="quick-actions">
+
+                        <button class="action-card" data-page="employees">
+                            <i class="fa-solid fa-user-plus"></i>
+                            <span>Add Employee</span>
+                        </button>
+
+                        <button class="action-card" data-page="scheduling">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                            <span>Create Schedule</span>
+                        </button>
+
+                        <button class="action-card" data-page="attendance">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                            <span>Mark Attendance</span>
+                        </button>
+
+                        <button class="action-card" data-page="leave">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                            <span>Manage Leaves</span>
+                        </button>
+
+                        <button class="action-card" data-page="reports">
+                            <i class="fa-solid fa-file-export"></i>
+                            <span>Generate Report</span>
+                        </button>
+
+                    </div>
+
+
+                    <!-- LOWER DASHBOARD -->
+
+                    <div class="dashboard-grid">
+
+                        <!-- EMPLOYEE TABLE -->
+
+                        <div class="dashboard-card employee-card">
+
+                            <div class="section-header">
+                                <div>
+                                    <h2>Recent Employees</h2>
+                                    <p>Recently added employees</p>
+                                </div>
+
+                                <button class="text-button" data-page="employees">
+                                    View All
+                                </button>
+                            </div>
+
+                            <div class="table-wrapper">
+
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Employee</th>
+                                            <th>Department</th>
+                                            <th>Position</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="recentEmployees">
+
+                                        <tr>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="https://ui-avatars.com/api/?name=Rahul&background=E8EEFF"
+                                                        alt="">
+                                                    <span>Rahul Sharma</span>
+                                                </div>
+                                            </td>
+                                            <td>Sales</td>
+                                            <td>Sales Manager</td>
+                                            <td><span class="status active">Active</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="https://ui-avatars.com/api/?name=Priya&background=FCE8F0"
+                                                        alt="">
+                                                    <span>Priya Verma</span>
+                                                </div>
+                                            </td>
+                                            <td>HR</td>
+                                            <td>HR Executive</td>
+                                            <td><span class="status active">Active</span></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="employee-info">
+                                                    <img src="https://ui-avatars.com/api/?name=Aman&background=E7F6ED"
+                                                        alt="">
+                                                    <span>Aman Singh</span>
+                                                </div>
+                                            </td>
+                                            <td>Inventory</td>
+                                            <td>Supervisor</td>
+                                            <td><span class="status leave">On Leave</span></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- SHIFT OVERVIEW -->
+
+                        <div class="dashboard-card">
+
+                            <div class="section-header">
+                                <div>
+                                    <h2>Today's Shifts</h2>
+                                    <p>Employee shift overview</p>
+                                </div>
+                            </div>
+
+                            <div class="shift-item">
+                                <div class="shift-time">
+                                    <h4>Morning Shift</h4>
+                                    <small>08:00 AM - 04:00 PM</small>
+                                </div>
+                                <span class="shift-badge morning">12 Staff</span>
+                            </div>
+
+                            <div class="shift-item">
+                                <div class="shift-time">
+                                    <h4>Evening Shift</h4>
+                                    <small>04:00 PM - 12:00 AM</small>
+                                </div>
+                                <span class="shift-badge evening">8 Staff</span>
+                            </div>
+
+                            <div class="shift-item">
+                                <div class="shift-time">
+                                    <h4>Night Shift</h4>
+                                    <small>12:00 AM - 08:00 AM</small>
+                                </div>
+                                <span class="shift-badge night">5 Staff</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- ATTENDANCE OVERVIEW -->
+
+                    <div class="dashboard-card attendance-card">
+
+                        <div class="section-header">
+                            <div>
+                                <h2>Attendance Overview</h2>
+                                <p>Today's workforce attendance summary</p>
+                            </div>
+
+                            <button class="text-button" data-page="attendance">
+                                View Details
+                            </button>
+                        </div>
+
+                        <div class="attendance-progress">
+
+                            <div class="progress-info">
+                                <span>Present Employees</span>
+                                <strong>80%</strong>
+                            </div>
+
+                            <div class="progress-bar">
+                                <div style="width:80%"></div>
+                            </div>
+
+                            <div class="progress-info">
+                                <span>Absent Employees</span>
+                                <strong>10%</strong>
+                            </div>
+
+                            <div class="progress-bar absent">
+                                <div style="width:10%"></div>
+                            </div>
+
+                            <div class="progress-info">
+                                <span>On Leave</span>
+                                <strong>10%</strong>
+                            </div>
+
+                            <div class="progress-bar leave-progress">
+                                <div style="width:10%"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="attendance-panel">
+                    <h2>Mark Employee Attendance</h2>
+
+                    <input type="date" id="manualAttendanceDate">
+
+                    <input type="text" id="attendanceEmployeeSearch" placeholder="Search employee...">
+
+                    <div id="attendanceMarkList"></div>
+                </div>
+                <!-- ==========================================
+     RETAILFLOW - ALL MODULE INTERFACES
+========================================== -->
+
+                <!-- 2. EMPLOYEE MANAGEMENT -->
+                <div class="page-section hidden" id="employees">
+
+                    <div class="section-header">
+                        <div>
+                            <h2>👥 Employee Management</h2>
+                            <p>Manage your complete workforce database.</p>
+                        </div>
+                        <button class="primary-btn" id="addEmployeeBtn">+ Add Employee</button>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2 id="employeeTotal">120</h2>
+                            <p>Total Employees</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>0</h2>
+                            <p>Active Employees</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>08</h2>
+                            <p>Inactive Employees</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>06</h2>
+                            <p>New This Month</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Employee Directory</h3>
+                        <input type="search" id="employeeSearch" placeholder="🔍 Search employee...">
+
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Employee ID</th>
+                                        <th>Employee Name</th>
+                                        <th>Department</th>
+                                        <th>Position</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="employeeTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card hidden" id="employeeFormContainer">
+                        <h3>➕ Add New Employee</h3>
+                        <form id="employeeForm">
+                            <input id="employeeID" placeholder="Employee ID" required>
+                            <input id="employeeName" placeholder="Full Name" required>
+                            <input id="employeeEmail" type="email" placeholder="Email" required>
+                            <input id="employeePhone" placeholder="Phone Number" required>
+                            <select id="employeeDepartment" required>
+                                <option value="">Select Department</option>
+                                <option>Sales</option>
+                                <option>Human Resources</option>
+                                <option>Inventory</option>
+                                <option>Marketing</option>
+                                <option>Customer Support</option>
+                                <option>Finance</option>
+                            </select>
+                            <input id="employeePosition" placeholder="Job Position" required>
+                            <input id="joiningDate" type="date" required>
+                            <button class="primary-btn">Save Employee</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- 3. ADD EMPLOYEE -->
+                <div class="page-section hidden" id="add-employee">
+
+                    <h2>➕ Employee Registration</h2>
+                    <p>Register a new employee in RetailFlow.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Personal Information</h3>
+
+                        <form id="registrationForm">
+                            <input placeholder="First Name">
+                            <input placeholder="Last Name">
+                            <input type="date" placeholder="Date of Birth">
+                            <select>
+                                <option>Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <input type="email" placeholder="Email Address">
+                            <input placeholder="Mobile Number">
+                            <input placeholder="Residential Address">
+
+                            <h3>Job Information</h3>
+
+                            <input placeholder="Employee ID">
+                            <select>
+                                <option>Select Department</option>
+                                <option>Sales</option>
+                                <option>HR</option>
+                                <option>Marketing</option>
+                                <option>Inventory</option>
+                            </select>
+
+                            <input placeholder="Job Designation">
+                            <input type="date">
+                            <input type="number" placeholder="Monthly Salary">
+
+                            <button type="button" class="primary-btn">Save Registration</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <!-- 4. DEPARTMENTS -->
+                <div class="page-section hidden" id="departments">
+
+                    <h2>🏢 Department Management</h2>
+                    <p>Organize employees by department.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Create Department</h3>
+                        <form id="departmentForm">
+                            <input id="newDepartment" placeholder="Department Name" required>
+                            <input id="departmentManager" placeholder="Department Manager">
+                            <button class="primary-btn">+ Add Department</button>
+                        </form>
+                    </div>
+
+                    <div id="departmentContainer" class="stats-grid"></div>
+
+                </div>
+
+
+                <!-- 5. SHIFT SCHEDULING -->
+                <div class="page-section hidden" id="scheduling">
+
+                    <h2>📅 Shift Scheduling</h2>
+                    <p>Plan and assign employee shifts.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2>12</h2>
+                            <p>Morning Shifts</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>08</h2>
+                            <p>Evening Shifts</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>05</h2>
+                            <p>Night Shifts</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>25</h2>
+                            <p>Total Assigned</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>➕ Assign New Shift</h3>
+
+                        <form id="shiftForm">
+                            <input id="shiftEmployee" placeholder="Employee Name or ID" required>
+
+                            <select id="shiftType" required>
+                                <option value="">Select Shift</option>
+                                <option>Morning</option>
+                                <option>Evening</option>
+                                <option>Night</option>
+                            </select>
+
+                            <input id="shiftDate" type="date" required>
+                            <input id="shiftStart" type="time" required>
+                            <input id="shiftEnd" type="time" required>
+
+                            <button class="primary-btn">Assign Shift</button>
+                        </form>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Assigned Shifts</h3>
+                        <div id="shiftContainer"></div>
+                    </div>
+                </div>
+
+
+                <section id="attendance" class="page-section hidden">
+
+                    <div class="attendance-header">
+                        <h2>Attendance Management</h2>
+                        <p>Manage employee attendance and working hours.</p>
+                    </div>
+
+                    <!-- Attendance Summary -->
+                    <div class="attendance-stats">
+
+                        <div class="stat-card">
+                            <h3>Total Employees</h3>
+                            <h2 id="attTotal">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>Present Today</h3>
+                            <h2 id="attPresent">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>Absent Today</h3>
+                            <h2 id="attAbsent">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>On Leave</h3>
+                            <h2 id="attLeave">0</h2>
+                        </div>
+
+                    </div>
+
+                    <!-- Search Employee -->
+                    <div class="attendance-panel">
+
+                        <h3>Employee Attendance</h3>
+
+                        <input type="date" id="attendanceDate">
+
+                        <input type="text" id="attendanceSearch" placeholder="Search employee by name or ID...">
+
+                        <div id="attendanceEmployeeList"></div>
+
+                    </div>
+                    <button class="mark-attendance-btn" onclick="attendanceSetStatus('EMP001','Present')">
+                        Mark Attendance
+                    </button>
+
+                    <!-- Attendance History -->
+                    <div class="attendance-panel">
+
+                        <h3>Attendance History</h3>
+
+                        <div id="attendanceHistory"></div>
+
+                    </div>
+
+                    <!-- On Leave Employees -->
+                    <div class="attendance-panel">
+
+                        <h3>Employees On Leave Today</h3>
+
+                        <div id="onLeaveTodayList"></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 7. LEAVE MANAGEMENT -->
+                <div class="page-section hidden" id="leave">
+
+                    <h2>🌴 Leave Management</h2>
+                    <p>Manage employee leave applications.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2>12</h2>
+                            <p>Pending Requests</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>25</h2>
+                            <p>Approved</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>03</h2>
+                            <p>Rejected</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>08</h2>
+                            <p>On Leave Today</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Submit Leave Application</h3>
+
+                        <form id="leaveForm">
+                            <input id="leaveEmployee" placeholder="Employee Name or ID" required>
+
+                            <select id="leaveType">
+                                <option>Casual Leave</option>
+                                <option>Sick Leave</option>
+                                <option>Annual Leave</option>
+                                <option>Emergency Leave</option>
+                            </select>
+
+                            <input type="date" id="leaveFrom" required>
+                            <input type="date" id="leaveTo" required>
+
+                            <textarea id="leaveReason" placeholder="Reason for leave"></textarea>
+
+                            <button class="primary-btn">Submit Application</button>
+                        </form>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Leave Requests</h3>
+                        <div id="leaveContainer"></div>
+                    </div>
+                </div>
+                <h2>Leave History</h2>
+                <div id="leaveHistory"></div>
+
+                <h2>Pending Leave Requests</h2>
+                <div id="pendingLeaveList"></div>
+
+                <!-- 8. PAYROLL -->
+                <div class="page-section hidden" id="payroll">
+
+                    <h2>💰 Payroll Management</h2>
+                    <p>Manage monthly employee payroll.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2>₹24L</h2>
+                            <p>Monthly Payroll</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>₹22L</h2>
+                            <p>Paid Salary</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>₹2L</h2>
+                            <p>Pending Payment</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>120</h2>
+                            <p>Employees</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Employee Payroll Records</h3>
+                        <div id="payrollContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 9. SALARY MANAGEMENT -->
+                <div class="page-section hidden" id="salary">
+
+                    <h2>💵 Salary Management</h2>
+                    <p>Manage employee compensation and salary structure.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Salary Components</h3>
+
+                        <form id="salaryForm">
+                            <input placeholder="Employee ID" required>
+                            <input placeholder="Employee Name" required>
+                            <input type="number" placeholder="Basic Salary">
+                            <input type="number" placeholder="House Rent Allowance">
+                            <input type="number" placeholder="Other Allowances">
+                            <input type="number" placeholder="Deductions">
+
+                            <button type="button" class="primary-btn">Calculate Salary</button>
+                        </form>
+
+                        <h3>Salary Structure</h3>
+                        <div id="salaryContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 10. TASK MANAGEMENT -->
+                <div class="page-section hidden" id="tasks">
+
+                    <h2>📋 Task Management</h2>
+                    <p>Assign and track employee responsibilities.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Create New Task</h3>
+                        <form id="taskForm">
+                            <input id="taskTitle" placeholder="Task Title" required>
+                            <input id="taskEmployee" placeholder="Employee Name or ID" required>
+
+                            <select id="taskPriority">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+
+                            <input type="date" id="taskDeadline" required>
+                            <button class="primary-btn">Assign Task</button>
+                        </form>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>All Assigned Tasks</h3>
+                        <div id="taskContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 11. PERFORMANCE -->
+                <div class="page-section hidden" id="performance">
+
+                    <h2>🏆 Performance Tracking</h2>
+                    <p>Monitor productivity and employee performance.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2>92%</h2>
+                            <p>Average Performance</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>85</h2>
+                            <p>Top Performer Score</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>15</h2>
+                            <p>Excellent Performers</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>08</h2>
+                            <p>Need Improvement</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Employee Performance Evaluation</h3>
+                        <div id="performanceContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 12. EMPLOYEE DIRECTORY -->
+                <div class="page-section hidden" id="directory">
+
+                    <h2>📇 Employee Directory</h2>
+                    <p>Find employee contact and professional information.</p>
+
+                    <div class="dashboard-card">
+                        <input type="search" id="directorySearch" placeholder="🔍 Search employee directory...">
+
+                        <div id="directoryContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 13. WEEKLY SCHEDULE -->
+                <div class="page-section hidden" id="weekly">
+
+                    <h2>📆 Weekly Schedule</h2>
+                    <p>View and manage your seven-day workforce schedule.</p>
+
+                    <div class="dashboard-card">
+                        <h3>This Week's Schedule</h3>
+                        <div id="weeklyContainer"></div>
+                    </div>
+                </div>
+
+
+                <section id="monthly" class="page-section hidden">
+
+                    <h2>Monthly Employee Schedule</h2>
+                    <p>Manage and track monthly employee shifts.</p>
+
+                    <div class="monthly-form">
+
+                        <h3>Create Monthly Schedule</h3>
+
+                        <form id="monthlyScheduleForm">
+
+                            <label>Employee</label>
+                            <select id="monthlyEmployee" required>
+                                <option value="">Select Employee</option>
+                            </select>
+
+                            <label>Month</label>
+                            <input type="month" id="monthlyMonth" required>
+
+                            <label>Shift Type</label>
+                            <select id="monthlyShift" required>
+                                <option value="Morning">Morning</option>
+                                <option value="Evening">Evening</option>
+                                <option value="Night">Night</option>
+                                <option value="General">General</option>
+                            </select>
+
+                            <label>Start Time</label>
+                            <input type="time" id="monthlyStart" required>
+
+                            <label>End Time</label>
+                            <input type="time" id="monthlyEnd" required>
+
+                            <button type="submit">Add Monthly Schedule</button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="monthly-history">
+
+                        <h3>Monthly Schedule History</h3>
+
+                        <input type="month" id="monthlyFilter">
+
+                        <div id="monthlyScheduleHistory"></div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- 15. OVERTIME -->
+                <div class="page-section hidden" id="overtime">
+
+                    <h2>⏱️ Overtime Management</h2>
+                    <p>Track additional employee working hours.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Record Overtime</h3>
+
+                        <form id="overtimeForm">
+                            <select id="overtimeEmployee" required>
+                                <option value="">Select Employee</option>
+                            </select>
+
+                            <input type="number" id="overtimeHours" placeholder="Overtime Hours" required>
+
+                            <input type="number" id="overtimeRate" placeholder="Hourly Rate" required>
+
+                            <input type="date" id="overtimeDate" required>
+
+                            <button class="primary-btn">Save Overtime</button>
+                        </form>
+
+                        <div id="overtimeContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 16. RECRUITMENT -->
+                <div class="page-section hidden" id="recruitment">
+
+                    <h2>🧑‍💼 Recruitment Management</h2>
+                    <p>Manage job applicants and hiring activities.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Add New Applicant</h3>
+
+                        <form id="recruitmentForm">
+                            <input id="applicantName" placeholder="Applicant Name" required>
+                            <input id="applicantEmail" type="email" placeholder="Email" required>
+                            <input id="applicantPosition" placeholder="Position Applied For" required>
+
+                            <select id="applicantStatus">
+                                <option>Applied</option>
+                                <option>Shortlisted</option>
+                                <option>Interview</option>
+                                <option>Selected</option>
+                                <option>Rejected</option>
+                            </select>
+
+                            <button class="primary-btn">Add Applicant</button>
+                        </form>
+                    </div>
+
+                    <div id="recruitmentContainer"></div>
+                </div>
+
+
+                <!-- 17. REPORTS -->
+                <div class="page-section hidden" id="reports">
+
+                    <h2>📊 Reports & Analytics</h2>
+                    <p>Analyze workforce data and generate reports.</p>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h2>120</h2>
+                            <p>Total Workforce</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>92%</h2>
+                            <p>Attendance</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>₹24L</h2>
+                            <p>Payroll</p>
+                        </div>
+                        <div class="stat-card">
+                            <h2>88%</h2>
+                            <p>Productivity</p>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <h3>Report Generation</h3>
+
+                        <select id="reportType">
+                            <option>Employee Report</option>
+                            <option>Attendance Report</option>
+                            <option>Payroll Report</option>
+                            <option>Shift Report</option>
+                            <option>Leave Report</option>
+                        </select>
+
+                        <button class="primary-btn" id="downloadReport">
+                            📥 Download Report
+                        </button>
+
+                        <div id="reportContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 18. NOTIFICATIONS -->
+                <div class="page-section hidden" id="notifications">
+
+                    <h2>🔔 Notification Center</h2>
+                    <p>Stay updated with workforce activities.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Recent Notifications</h3>
+                        <div id="notificationContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 19. SETTINGS -->
+                <div class="page-section hidden" id="settings">
+
+                    <h2>⚙️ System Settings</h2>
+                    <p>Configure your RetailFlow system.</p>
+
+                    <div class="dashboard-card">
+                        <h3>Company Settings</h3>
+                        <div id="settingsContainer"></div>
+                    </div>
+                </div>
+
+
+                <!-- 20. ADMIN PROFILE -->
+                <div class="page-section hidden" id="profile">
+
+                    <h2>👤 Administrator Profile</h2>
+                    <p>Manage administrator account details.</p>
+
+                    <div class="dashboard-card">
+                        <div id="profileContainer"></div>
+
+                    </div>
+                </div>
+                <div class="attendance-extra">
+
+                    <h2>Today's Attendance Overview</h2>
+
+                    <div class="attendance-stats">
+                        <div class="stat-card">
+                            <h3>Total Employees</h3>
+                            <h2 id="attTotal">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>Present Today</h3>
+                            <h2 id="attPresent">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>Absent Today</h3>
+                            <h2 id="attAbsent">0</h2>
+                        </div>
+
+                        <div class="stat-card">
+                            <h3>On Leave Today</h3>
+                            <h2 id="attLeave">0</h2>
+                        </div>
+                    </div>
+
+                    <h2>Mark Employee Attendance</h2>
+                    <div id="attendanceMarkList"></div>
+
+                    <h2>Employees On Leave Today</h2>
+                    <div id="onLeaveTodayList"></div>
+
+                    <h2>Attendance History</h2>
+                    <div id="attendanceHistory"></div>
+
+                </div>
+
+                <script src="./script.js"></script>
+
+</body>
+
+</html>
